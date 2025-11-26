@@ -1,0 +1,66 @@
+name: OakTpa
+version: '1.0.0'
+main: oaktpa.OakTpa
+api-version: 1.16
+author: ASHU16
+description: Professional TPA Plugin with GUI System
+website: https://github.com/ASHU16
+
+commands:
+  tpa:
+    description: Send a teleport request to a player
+    usage: /tpa <player>
+    permission: otp.use
+  tpahere:
+    description: Request a player to teleport to you
+    usage: /tpahere <player>
+    permission: otp.use
+  tpaccept:
+    description: Accept a teleport request
+    usage: /tpaccept [player]
+    permission: otp.use
+  tpcancel:
+    description: Cancel your sent teleport request
+    usage: /tpcancel
+    permission: otp.use
+  tpdeny:
+    description: Deny a teleport request
+    usage: /tpdeny [player]
+    permission: otp.use
+  tpatoggle:
+    description: Toggle receiving teleport requests
+    usage: /tpatoggle
+    permission: otp.use
+  back:
+    description: Teleport to your last death location
+    usage: /back
+    permission: otp.use
+  tp:
+    description: Teleport to a player (Admin)
+    usage: /tp <player>
+    permission: otp.admin.tp
+  otpa:
+    description: OakTpa admin commands
+    usage: /otpa <reload>
+    permission: otp.admin
+  otp:
+    description: OakTpa force teleport commands
+    usage: /otp forcetp <player1> <player2>
+    permission: otp.admin.forcetp
+
+permissions:
+  otp.use:
+    description: Allows use of basic TPA commands
+    default: true
+  otp.admin:
+    description: Allows use of admin commands
+    default: op
+  otp.admin.tp:
+    description: Allows teleporting to players without request
+    default: op
+  otp.admin.forcetp:
+    description: Allows force teleporting players
+    default: op
+  otp.admin.reload:
+    description: Allows reloading the plugin
+    default: op

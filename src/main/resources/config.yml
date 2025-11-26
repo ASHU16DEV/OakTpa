@@ -1,0 +1,89 @@
+# OakTpa Configuration File
+# Plugin by ASHU16
+# Version: 1.0.0
+
+# Request Settings
+request:
+  timeout: 60
+  prevent-duplicate: true
+  
+# Database Settings
+database:
+  type: sqlite
+  filename: oaktpa.db
+
+# Messages (Use & for color codes: &a=green, &c=red, &e=yellow, &b=aqua, &f=white, &7=gray)
+messages:
+  prefix: '&8[&6OakTpa&8]&r '
+  
+  # TPA Messages
+  tpa-sent: '&aTeleport request sent to &e{player}&a!'
+  tpa-received: '&e{player} &awants to teleport to you.'
+  tpa-received-buttons-prefix: '&7Click to: '
+  tpahere-sent: '&aTeleport request sent to &e{player}&a!'
+  tpahere-received: '&e{player} &awants you to teleport to them.'
+  tpahere-received-buttons-prefix: '&7Click to: '
+  
+  # Accept/Deny Messages
+  request-accepted-sender: '&e{player} &ahas accepted your teleport request!'
+  request-accepted-receiver: '&aYou accepted &e{player}&a''s teleport request!'
+  request-denied-sender: '&e{player} &chas denied your teleport request!'
+  request-denied-receiver: '&cYou denied &e{player}&c''s teleport request!'
+  
+  # Cancel Messages
+  request-cancelled-sender: '&cYou cancelled your teleport request to &e{player}&c!'
+  request-cancelled-receiver: '&e{player} &ccancelled their teleport request!'
+  request-timeout-sender: '&cYour teleport request to &e{player} &chas expired!'
+  request-timeout-receiver: '&e{player}&c''s teleport request has expired!'
+  
+  # Toggle Messages
+  toggle-enabled: '&aYou are now receiving teleport requests!'
+  toggle-disabled: '&cYou are no longer receiving teleport requests!'
+  
+  # Back Command Messages
+  back-success: '&aTeleported to your last death location!'
+  no-death-location: '&cYou don''t have a death location to return to!'
+  
+  # Admin Messages
+  admin-tp-success: '&aTeleported to &e{player}&a!'
+  admin-tpahere-success: '&aTeleported &e{player} &ato you!'
+  admin-forcetp-success: '&aTeleported &e{player1} &ato &e{player2}&a!'
+  reload-success: '&aOakTpa has been reloaded successfully!'
+  
+  # Teleport Warmup Messages
+  teleport-warmup: '&aTeleporting to &e{player} &ain &e{seconds} seconds&a...'
+  teleport-countdown: '&eTeleporting in &a{seconds} seconds&e...'
+  teleport-success: '&aTeleported successfully!'
+  teleport-cancelled-moved: '&cTeleport cancelled because you moved!'
+  
+  # Error Messages
+  no-permission: '&cYou don''t have permission to use this command!'
+  player-not-found: '&cPlayer &e{player} &cis not online!'
+  no-pending-request: '&cYou don''t have any pending teleport requests!'
+  no-request-from-player: '&cYou don''t have a teleport request from &e{player}&c!'
+  already-sent-request: '&cYou already have a pending request to &e{player}&c!'
+  player-disabled-requests: '&e{player} &cis not accepting teleport requests!'
+  cannot-teleport-self: '&cYou cannot teleport to yourself!'
+  teleport-failed: '&cTeleport failed! Please try again.'
+  usage-tpa: '&cUsage: /tpa <player>'
+  usage-tpahere: '&cUsage: /tpahere <player>'
+  usage-tpaccept: '&cUsage: /tpaccept [player]'
+  usage-tp: '&cUsage: /tp <player>'
+  usage-forcetp: '&cUsage: /otp forcetp <player1> <player2>'
+  usage-otpa: '&cUsage: /otpa reload'
+  
+# Teleport Settings
+teleport:
+  safe-teleport: true
+  teleport-delay: 5
+  cancel-on-move: true
+
+# Command Settings (Customize command names)
+commands:
+  tpa: 'tpa'
+  tpahere: 'tpahere'
+  tpaccept: 'tpaccept'
+  tpdeny: 'tpdeny'
+  tpcancel: 'tpcancel'
+  tpatoggle: 'tpatoggle'
+  back: 'back'

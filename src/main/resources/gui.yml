@@ -1,0 +1,57 @@
+# OakTpa GUI Configuration
+# Customize the TPA request GUI here
+# All changes will apply after /otpa reload
+
+gui:
+  title: '&6Teleport Request'
+  size: 27
+  
+  # Player Head (Shows target player info)
+  player-head:
+    slot: 13
+    material: PLAYER_HEAD
+    name: '&e{player}'
+    lore:
+      - '&7World: &f{world}'
+      - ''
+      - '&7Click send to teleport'
+  
+  # Send Button
+  send-button:
+    slot: 11
+    material: LIME_WOOL
+    name: '&a&lSEND REQUEST'
+    lore:
+      - '&7Click to send the'
+      - '&7teleport request'
+      - ''
+      - '&aClick to confirm'
+    custom-model-data: 0
+  
+  # Cancel Button
+  cancel-button:
+    slot: 15
+    material: RED_WOOL
+    name: '&c&lCANCEL'
+    lore:
+      - '&7Click to cancel and'
+      - '&7close this menu'
+      - ''
+      - '&cClick to cancel'
+    custom-model-data: 0
+  
+  # Background/Filler Items (optional)
+  filler:
+    enabled: true
+    material: GRAY_STAINED_GLASS_PANE
+    name: ' '
+    slots: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]
+
+# Material Compatibility Settings
+# For versions below 1.13, materials will be auto-converted
+compatibility:
+  legacy-materials:
+    LIME_WOOL: 'WOOL:5'
+    RED_WOOL: 'WOOL:14'
+    GRAY_STAINED_GLASS_PANE: 'STAINED_GLASS_PANE:7'
+    PLAYER_HEAD: 'SKULL_ITEM:3'
